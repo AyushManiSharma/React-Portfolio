@@ -1,7 +1,7 @@
 import React from "react";
-import portfolio from "../../assets/portfolio.png";
-import textEditor from "../../assets/text-Editor.png";
-import ReadMeGenerator from "../../assets/ReadMeGenerator";
+import portfolio from "./assets/portfolio.png";
+import textEditor from "./assets/text-Editor.png";
+import ReadMeGenerator from "./assets/ReadMeGenerator";
 
 function Portfolio() {
   return (
