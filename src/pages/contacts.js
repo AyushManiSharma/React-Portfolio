@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { validateEmail } from "../../utils/helpers";
 
 function Contact() {
   const [email, setEmail] = useState("");
   const [userName, setUserName] = useState("");
   const [message, setMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (e) => {
     const { target } = e;
@@ -21,23 +19,6 @@ function Contact() {
     }
   };
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    if (!validateEmail(email) || !userName) {
-      setErrorMessage("Email or Name is invalid");
-      return;
-    }
-
-    if (!setMessage(message)) {
-      setErrorMessage(`Message is required.`);
-      return;
-    }
-
-    setUserName("");
-    setMessage("");
-    setEmail("");
-  };
-
   return (
     <section id="reach-out" className="contact">
       <div className="flex-row">
@@ -45,20 +26,17 @@ function Contact() {
 
       <div className="contact-info">
         <div>
-          <h3>Hello!{userName}</h3>
+          <h3>Hello {userName}</h3>
           <p>Want to get in contact?</p>
           <address>
-            Ottawa ON Canada <br />
-            P: <a href="tel:613.462.4273">613.462.4273</a>
+            Ottawa, ON, Canada <br />
+            P: <a href="tel:819-329-7085">819-329-7085</a>
             <br />
             E:{" "}
-            <a href="mailto://sophienathalie.marquis85@gmail.com">
-              sophienathalie.marquis85@gmail.com
+            <a href="mailto://ayushmanisharma@gmail.com">
+              ayushmanisharma@gmail.com
             </a>
           </address>
-          <p>
-            <strong>I'd love to get your feedback!</strong>
-          </p>
         </div>
 
         {/* contact form section  */}
